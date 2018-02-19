@@ -5,8 +5,8 @@ This problem provides practice at:
   ***  FOR and WHILE loops.  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Tyler TOwnsend.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -134,6 +134,22 @@ def run_test_practice_problem3():
     # SUGGESTION: Ask an assistant to CHECK your tests to confirm
     #             that they are adequate tests!
     ####################################################################
+
+    # Test 1:
+    answer = practice_problem3(-2, 2, 1.3)
+    expected1 = [1, 7]
+    print()
+    print('Test 1:')
+    print('  Expected:', expected1)
+    print('  Actual:  ', answer)
+
+    # Test 2:
+    answer = practice_problem3(-2, 2, 1.3)
+    expected1 = [1, 7]
+    print()
+    print('Test 1:')
+    print('  Expected:', expected1)
+    print('  Actual:  ', answer)
 
 
 def practice_problem3(start, n, threshold):
