@@ -136,18 +136,18 @@ def run_test_practice_problem3():
     ####################################################################
 
     # Test 1:
-    answer = practice_problem3(-2, 2, 1.3)
-    expected1 = [1, 7]
+    answer = practice_problem3(-4, 4, 1.2)
+    expected1 = [1, 7, 13, 20]
     print()
     print('Test 1:')
     print('  Expected:', expected1)
     print('  Actual:  ', answer)
 
     # Test 2:
-    answer = practice_problem3(-2, 2, 1.3)
-    expected1 = [1, 7]
+    answer = practice_problem3(0, 7, 1.2)
+    expected1 = [1, 7, 13, 20, 26, 32, 38]
     print()
-    print('Test 1:')
+    print('Test 2:')
     print('  Expected:', expected1)
     print('  Actual:  ', answer)
 
@@ -212,7 +212,7 @@ def practice_problem3(start, n, threshold):
        -- n is 6, then this function returns [-1, 0, 1, 2, 3, 5]
 
     and if n is 0 (regardless of what start is),
-       this function returns []
+       this function returns [] DONE
 
     and if threshold is more than the square root of 2,
        this function returns (regardless of what start and n are):
@@ -224,7 +224,7 @@ def practice_problem3(start, n, threshold):
       :type threshold: float
     """
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Some tests are already written for you (above),
     #          but you are required to write ADDITIONAL tests (above).
     ####################################################################
@@ -232,6 +232,23 @@ def practice_problem3(start, n, threshold):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   < 15 minutes.
     ####################################################################
+
+    list = []
+    while True:
+        if n == 0:
+            return []
+
+        if threshold > math.sqrt(2):
+            for k in range(start, n):
+                list.append(k)
+            return list
+
+        if math.cos(start) + math.sin(start) > threshold:
+            list.append(start)
+
+        if len(list) == n:
+            return list
+        start = start + 1
 
 
 # ----------------------------------------------------------------------
